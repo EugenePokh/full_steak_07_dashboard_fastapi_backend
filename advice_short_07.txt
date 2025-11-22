@@ -1,0 +1,31 @@
+Занятие 7
+5. FastApi
+5.1. Установка зависимотей
+# Основные зависимости FastAPI
+pip install fastapi uvicorn
+
+# База данных
+pip install psycopg2-binary sqlalchemy pandas
+
+# Pydantic для валидации данных
+pip install pydantic pydantic-settings
+
+# Дополнительные зависимости для анализа данных (если используются в скриптах)
+pip install numpy scikit-learn matplotlib seaborn
+
+# Для нейросетей (если используются в analysis.py)
+pip install tensorflow torch scikit-learn
+
+# Для работы с Excel/CSV (если нужно в upload.py)
+pip install openpyxl xlrd
+
+# Для асинхронных запросов (если понадобится)
+pip install httpx aiofiles
+
+5.2. Запуск
+python run.py
+Остановка Ctrl + C
+
+6. React Native - дашборды
+6.1. Установка зависимостей
+npm install react-native-chart-kit

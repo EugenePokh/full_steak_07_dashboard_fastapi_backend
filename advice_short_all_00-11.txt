@@ -1,0 +1,324 @@
+Занятие 0
+0. React Native / React / Python / FastAPI / PostgreSQL
+
+Занятие 1
+1. Первичная настрока:
+1.1. Система для работы:
+https://code.visualstudio.com/
+
+1.2. Установка git
+https://git-scm.com/
+
+1.3. Работа с git
+https://github.com/
+
+1.3.1. Регистрация на git (любая почта)
+1.3.2. Создание репозитория
+Repositories -> New repository
+
+1.4. Работа через ИИ
+1.4.1 Установка VPN
+(с ПК удобнео запускать через NekoBox (включить Режим TUN)
+
+1.4.2. Регистрация в сервисах
+https://chatgpt.com/
+https://chat.deepseek.com/
+(рекоменую через почтовые ящики @gmail.com (Google) или @outlook.com (Microsoft))
+
+2. React Native
+2.1. Установка node (необходим для JavaScript)
+https://nodejs.org/en
+2.2. Основной портал для разработки
+https://docs.expo.dev/
+https://reactnative.dev/
+
+
+Занятие 2
+2.3. Установка Android Studio (для Windows)
+https://developer.android.com/studio?hl=ru
+
+2.4. Создание эмулятора в смартфона в Android Studio
+(необязательно, т.к. можно тестировать через web  - бразуер или создавать ПО для бразуера)
+
+2.6. Проект React Native
+2.6.1. VS Studio Code
+2.6.2. Открываем директорию, где хотим создать проект
+2.6.3. Открываем терминал в VS Studio Code
+2.6.4. Основные команды в терминале:
+cd .. (назад в директории)
+cd folder_title (папка в которую нужно перейти)
+
+2.6.5. Проверяем версии:
+node --version
+npm --version
+
+
+2.6.6. Создаем новый проект
+npx create-expo-app@latest new_project_title --template blank
+npx expo install react-dom react-native-web (для запуска через web)
+
+
+2.6.7. Запуск / остановка проекта
+2.6.7.1. Запуск проекта
+npx expo start
+
+w - в консоли (чтобы запусить в браузере)
+F12 - для запуска просомтра в браузере в режиме телефона
+a / i запуск в эмуляторе (чтобы запустить в эмуляторе Android или iPhone (только для Mac)
+Expo (приложение на смартфон из PlayMarket и App Store)
+
+2.6.7.2. Остановка проекта
+Ctrl + C
+
+Занятие 3
+2.6.8. Установка первоначальных зависимостей
+npm install @react-navigation/native @react-navigation/native-stack (для работы навигации (переключения между экранами в проекте)
+npm install @react-native-async-storage/async-storage (для сохранения состояния)
+npm install expo
+
+2.6.9. Создание экрана лоигна и пароля
+2.6.10. Создание экрана меню
+2.6.11. Сохранение на git первой версии
+git init //инициализация git
+git remote add origin https://github.com/(...).git  //подключение к созданному на https://github.com/ репозитории
+git branch -M main //подключение к ветке main
+git add . //добавление файлов в проект
+git commit -m "First commit" //созданеи коммита
+git push origin main //отправка данных в репозиторий
+
+Занятие 4
+2.6.12 Создание экрана навигации
+- Установка зависимостей
+expo install react-native-maps expo-location
+npm install react-leaflet leaflet
+
+2.6.13. Экран свайпов
+Дополнительные зависимости не требуются
+
+2.16.14. Сохранение в новый репозиторий git
+git remote -v //посмотреть подключенные репозитории
+git remote remove origin //удалить подключение к сущетсвующим репозиториям
+
+Занятие 5
+3. PostgreSQL
+3.1. Установка
+https://www.postgresql.org/
+
+3.2. Общие настройки подключения
+host='localhost',
+database='postgres',
+user='postgres',
+password='postgres',
+port=5432
+
+4. Python
+https://www.python.org/
+
+4.1. Загрузка данных в базу PostgreSQL
+4.1.1. Вирутальное окружение (опционально)
+python -m venv myenv //установить виртуальное окружение
+source myenv/bin/activate //включить вирутальное окружение
+deactivate //выключить вирутальнео окружение
+
+4.1.2. Усатновка зависимостей
+pip install pandas openpyxl psycopg2-binary sqlalchemy
+
+Занятие 6
+4.2. Нейросеть для прогнозирования данных
+4.2.1. Для простых математичсеких действий
+pip install pandas numpy psycopg2 sqlalchemy matplotlib seaborn
+
+4.2.2. Установка расширений для работы видеокарты при обработке данных
+- Установка CUDA
+https://developer.nvidia.com/cuda-toolkit
+
+- Установка фреймворков и бибилиотек
+pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+
+- Установка зависимостей
+pip install pandas numpy scikit-learn tensorflow matplotlib seaborn psycopg2 sqlalchemy
+
+	
+
+Занятие 8
+FastAPI
+5.2. Эндпойнты (SWAGGER)
+http://localhost:8000/docs
+
+7. React
+7.1. Установка зависимостей
+npm install react react-dom
+
+7.2. Запуск
+npm run dev
+Остановка Ctrl + C
+
+Занятие 9
+8. Подготовка билда приложения для ANDROID
+8.1. Регистрация
+https://expo.dev/
+
+8.2. Команды для консоли из папки проекта
+Установка EAS CLI
+npm install -g @expo/eas-cli
+
+Логин в Expo account
+eas login
+
+Сборка Android приложения
+eas build --platform android
+(в процессе создания билда совсем соглашаемся)
+
+Согласование версий - установить:
+https://nodejs.org/en/download/
+v22.21.1 (LTS)
+
+Изменить: package.json
+{
+  "name": "react_native_basic",
+  "version": "1.0.0",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "web": "expo start --web"
+  },
+  "dependencies": {
+    "expo": "~52.0.46",
+    "expo-location": "~17.0.0",
+    "expo-status-bar": "~2.0.0",
+
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "react-native": "^0.76.9",
+    "react-native-web": "~0.19.13",
+
+    "@react-native-async-storage/async-storage": "^1.23.1",
+    "@react-navigation/native": "^7.0.19",
+    "@react-navigation/native-stack": "^7.3.3",
+    "react-native-chart-kit": "^6.12.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.20.0"
+  }
+}
+
+
+Удаление:
+- Папка node_modules
+- package-lock.json
+
+Команды:
+npm install
+npm install -g @expo/cli
+eas build --platform android //создать билд
+
+8.3. Перейти на сайт
+https://expo.dev/
+в раздел overview и выбрать свой проект
+
+8.4. Выбрать последний Build (или необходимый)
+8.5. Скачать aab build
+8.6. Конвертация aab файла в apk для установки
+8.6.1. Создание ключа
+keytool -genkey -v -keystore "C:\Users\admin\Documents\Coding\Convert\keystore.jks" -alias MyKeyAlias -keyalg RSA -keysize 2048 -validity 10000 -storepass ваш_пароль -keypass ваш_пароль -dname "CN=Имя Фамилия, OU=Отдел, O=Организация, L=Город, ST=Регион, C=RU"
+(не должно быть русских симоволов, папку где сохранить пароль выберите самостоятельно, все заполнити - что нужно в команде создания ключа)
+
+8.6.2. Скачиваем bundletool:
+https://github.com/EugenePokh/full_steak_07_react_native_android_build.git
+
+8.6.3. Запускаеим bundletool:
+java -jar "C:\Users\admin\Documents\Coding\Convert\bundletool-all-1.18.1.jar" build-apks --bundle="C:\Users\admin\Documents\Coding\Convert\application.aab" --output="C:\Users\admin\Documents\Coding\Convert\application.apks" --ks="C:\Users\admin\Documents\Coding\Convert\keystore.jks" --ks-key-alias="MyKeyAlias" --mode=universal
+
+Возможно потребуется утсановить Java:
+https://www.oracle.com/java/technologies/downloads/
+
+C:\Users\admin\Documents\Coding\Convert\bundletool-all-1.18.1.jar //путь, где находится bundletool
+C:\Users\admin\Documents\Coding\Convert\application.aab //путь, где находится конвертируемый файл
+application.aab //название нашего файла с expo
+C:\Users\admin\Documents\Coding\Convert\application.apks //путь, где будет находиться выходной файл
+C:\Users\admin\Documents\Coding\Convert\keystore.jks //путь, где находится ключ
+
+8.6.4. Полученный файл application.apks переименовываем в application.zip (правая кнопка мышки на файл - переименовать)
+8.6.5. Извлекаем файлы из zip архива
+8.6.6. В итоге получим файл universal.apk (данный файл возможно устанавливать на смартфон Android)
+8.6.7. Справочно:
+При публикации прилоижения потребуется заменить ссылки localhost на IP вашего сервера - без этого не будет работать
+В нашем приложение потребуется заменить в dashboard.js
+
+const API_BASE_URL = 'http://localhost:8000/api';
+
+8.7. Публикация в магазинах приложений:
+8.7.1. Rustore - да (сейчас в России почти все пользуются из-за ограниченйи Google)
+https://console.rustore.ru/sign-in
+(перейти по ссылке и зарегестрироваться)
+Потребуется статус самозанятого, оформить прямо через ссылки на сайте Rustore
+
+8.7.2. Huawei - да (доступен без иностарнных карт и резиденства вне России, возможно получать средства на карту МИР)
+https://developer.huawei.com/consumer/en/console/service
+
+8.7.3. Google Play - нет (нужно оплатить ~25 USD комиссии, без иностарнной карты и резиденства (пропсики) не получится верифицироваться, потребуется привлечь около 20 тестеров для публикации певрого приложения)
+Без оплаты Google средств на продвижение, приложение невозможно будет найти через поиск сервиса (только если пройти по ссылке)
+
+8.7.4. Samsung - нет (требуется PayPal и иностранная карта соответсвенно)
+
+8.7.5. Apple (App Store) - нет (платеж 100 USD  в год, без иностранной карты и иностранного резидества не сможете поучать средства от монетизации - зарегестрироваться и оплатить комиссию получится, а вот получить средства уже нет)
+
+
+Занятие 10
+9. Размещение на сервере
+9.1. Регистрация на TimeWeb
+https://timeweb.cloud/
+
+9.2. Облачный сервер (самый простой для нашего тестирования) - обязательно добавляем публичный IP
+9.3. Возможно через git, а а можно через перенос на сервер:
+Открываем Git Bash (через пуск, или если установлен ssh - то через любую. консоль):
+scp "C:\Users\admin\Documents\Coding\full_steak\react_native\full_steak.zip" root@X.XXX.XXX.XXX:~
+"C:\Users\admin\Documents\Coding\full_steak\react_native\full_steak.zip" //путь, где находится передаваемый файл
+X.XXX.XXX.XXX // публичный IP вашего сервера
+
+После ввода команды из разедла "Доступ" вашего сервера нужно скопировать пароль и вставить в консоль Git Bash
+
+9.4. Пеhtходим в https://timeweb.cloud/ в раздел консоль
+Вводим root и копируем пароль из вкладки "Доступ" - осущетсвляем вход на сервер
+Далее вводим команды
+sudo apt update
+sudo apt install unzip
+unzip full_steak.zip
+full_steak.zip //наименование нашегно архива, который мы перенсли на сервер со своего компьютера
+
+9.4.1. Запускаем backend
+cd backend
+sudo apt install python3 python3-pip python3-venv -y //установка Python
+sudo apt install postgresql postgresql-contrib -y //установка PostgreSQL
+sudo systemctl start postgresql //запускаем и добавляем в автозагрузку
+sudo systemctl enable postgresql
+
+python3 -m venv myenv //создаем вирт. среду
+source myenv/bin/activate //запускаем вирт. среду
+pip install fastapi uvicorn psycopg2-binary sqlalchemy pandas numpy
+pip install scikit-learn matplotlib seaborn tensorflow
+python3 run.py
+
+9.4.2. Запускаем frontend
+Открываем консоль VNC
+cd react
+curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash - //устанавливаем node
+sudo apt-get install -y nodejs
+npm install
+npm install react react-dom
+npm run dev
+
+Занятие 11
+10. Парсинг с сайтов с помощью Python
+10.1.
+pip install playwright //установка Playwright
+
+playwright install firefox //установка браузеров (выполнить после установки playwright)
+playwright install //или для всех браузеров
+
+10.2. Playwright vs BeautifulSoup
+Playwright эмулирует реальный браузер, подходит для JavaScript-сайтов
+BeautifulSoup только парсит HTML, быстрее но не работает с JS
